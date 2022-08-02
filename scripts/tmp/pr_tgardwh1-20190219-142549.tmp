@@ -1,2 +1,0 @@
-select g.* from gv$session g where inst_id=&1 and sid=&2
-/

@@ -1,1 +1,0 @@
-select * from PGARDBA.ASV_HISTORIC_SQL_PERF_VW;

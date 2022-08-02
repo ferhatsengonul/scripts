@@ -1,6 +1,0 @@
-DIRECTORY_SERVERS= (oid.fw.garanti.com.tr:389:636)
-
-DEFAULT_ADMIN_CONTEXT = "dc=fw,dc=oid,dc=com,dc=tr"
-
-DIRECTORY_SERVER_TYPE = OID
-
