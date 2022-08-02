@@ -1,0 +1,440 @@
+Current Execution Plans (last execution)
+
+Captured while still in memory. Metrics below are for the last execution of each child cursor.
+If STATISTICS_LEVEL was set to ALL at the time of the hard-parse then A-Rows column is populated.
+
+Enter value for 1: 
+OIDUSER@TGARDWHRW 2019-11-30 20:52:33 SQL> 
+OIDUSER@TGARDWHRW 2019-11-30 20:52:33 SQL> @sqlid 85sf5uv5t1dj9
+Show SQL text, child cursors and execution stats for SQLID 85sf5uv5t1dj9
+
+HASH_VALUE  CH#  PLAN_HASH PARSE_SCHEMA         SQL_TEXT                                                                         SQL_PROFILE          FORCE_MATCHING_SIGNATURE
+---------- ---- ---------- -------------------- -------------------------------------------------------------------------------- -------------------- ------------------------
+3415258665    0 2098243032 UGARODI              insert /*+ noparallel append */ into TGARQRMALM.TDM_QRM_CASHFLOW                                            657815421302719137
+                                                (
+                                                "PORTFOLIO_DATE","RUN_DATE","MODULE","SOURCE_TABLE","SUB_SOURCE_TABLE","CONTRACT
+                                                _ID","CLIENT_CODE","LOCAL_CENTER_MIN_LEVEL","PRODUCT_NUMBER","REFERENCE_NUMBER",
+                                                "GL_ACCOUNT_MIN_LEVEL","ORIGINAL_CURRENCY","PRODUCT_CODE","INSTALLMENT_FLAG","CU
+                                                T_FLAG","PAYMENT_PLAN_NUM","PRE_POST_TYPE","PAYMENT_STATUS","PAYMENT_DATE","CF_S
+                                                EQ_NUMBER","PRINCIPAL_CF_AMOUNT_BC","INTEREST_CF_AMOUNT_BC","INSTALLMENT_AMOUNT_
+                                                BC","CF_AVERAGE_MATURITY_DATE","CF_MATURITY_DATE_BUCKET","PRINCIPAL_CF_PERCENTAG
+                                                E","PRINCIPAL_CF_AMOUNT_FX","INTEREST_CF_AMOUNT_FX","INSTALLMENT_AMOUNT_FX","DEK
+                                                _FLAG","BUY_SELL_FLAG","LEGAL_ENTITY","CUSTOM_SCHEDULE_ID","LEG_SEQ_NUMBER","LAY
+                                                OUT_SHEET" )
+                                                select
+                                                "PORTFOLIO_DATE","RUN_DATE","MODULE","SOURCE_TABLE","SUB_SOURCE_TABLE","CONTRACT
+                                                _ID","CLIENT_CODE","LOCAL_CENTER_MIN_LEVEL","PRODUCT_NUMBER","REFERENCE_NUMBER",
+                                                "GL_ACCOUNT_MIN_LEVEL","ORIGINAL_CURRENCY","PRODUCT_CODE","INSTALLMENT_FLAG","CU
+                                                T_FLAG","PAYMENT_PLAN_NUM","PRE_POST_TYPE","PAYMENT_STATUS","PAYMENT_DATE","CF_S
+                                                EQ_NUMBER","PRINCIPAL_CF_AMOUNT_BC","INTEREST_CF_AMOUNT_BC","INSTALLMENT_AMOUNT_
+                                                BC","CF_AVERAGE_MATURITY_DATE","CF_MATURITY_DATE_BUCKET","PRINCIPAL_CF_PERCENTAG
+                                                E","PRINCIPAL_CF_AMOUNT_FX","INTEREST_CF_AMOUNT_FX","INSTALLMENT_AMOUNT_FX","DEK
+                                                _FLAG","BUY_SELL_FLAG","LEGAL_ENTITY","CUSTOM_SCHEDULE_ID","LEG_SEQ_NUMBER","LAY
+                                                OUT_SHEET" from PGARQRMALM.TDM_QRM_CASHFLOW@ODI_DATA_TRANS_PGARDWH where 1=1
+
+
+Elapsed: 00:00:00.32
+
+   INST_ID  CH#     PARSES   H_PARSES EXECUTIONS    FETCHES ROWS_PROCESSED    CPU_SEC    ELA_SEC       LIOS       PIOS      SORTS FIRST_LOAD_TIME     LAST_ACTIVE_TIME
+---------- ---- ---------- ---------- ---------- ---------- -------------- ---------- ---------- ---------- ---------- ---------- ------------------- -------------------
+         1    0          0          2          0          0              0   51828.33   51937.77    7809522      23154          0 2019-11-29/10:07:21 2019-11-30 20:52:48
+
+Elapsed: 00:00:00.16
+
+SQL_ID         FORCE_MATCHING_SIGNATURE
+-------------- ------------------------
+85sf5uv5t1dj9        657815421302719137
+
+Elapsed: 00:00:00.10
+@sqlidh 85sf5uv5t1dj9 for history
+@sqlids 85sf5uv5t1dj9 for sessions running this sql
+@sqls TIMS  for sqls from this user
+@sqlhistogram TIMS   for sqlhistogram from this user
+@sqlx 85sf5uv5t1dj9 CHILD_NUMBER INST_ID  (last exeqution plan for rac)
+@sqlxp 85sf5uv5t1dj9 PLAN_HASH_VALUE CHILD_NUMBER INST_ID (last execution plan for plan_hash_value)
+@sqlxa 85sf5uv5t1dj9 PLAN_HASH_VALUE (execution plan from AWR)
+OIDUSER@TGARDWHRW 2019-11-30 20:52:49 SQL> @sqlhistogram
+sqlhistogram for a user from ASH for the last one hour and runcount > 100
+Enter value for 1: 85sf5uv5t1dj9
+
+no rows selected
+
+Elapsed: 00:00:00.50
+OIDUSER@TGARDWHRW 2019-11-30 20:53:38 SQL> @sqlidh 85sf5uv5t1dj9
+historical performance of a sql_id(var 1 ) For the last 7 days
+use sta sqildhf force_matching_signature for the last 7 days
+
+ I# PLAN_HASH_VALUE FORCE_MATCHING_SIGNTURE                  PARSE_SCHEM BEGIN_INTERVAL_TIME            EXEC_DELTA BUFFER_GETS DISK_READS ELAPSED_SN     CPU_SN ROWS_PROCCESSED
+--- --------------- ---------------------------------------- ----------- ------------------------------ ---------- ----------- ---------- ---------- ---------- ---------------
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 10.00.20.307 AM               0      207034        110  1417.2942  1413.2237               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 10.30.25.953 AM               0      258531         50  1785.8202  1781.3372               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 11.00.32.177 AM               0      256142         16  1811.0623  1805.0643               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 11.30.38.793 AM               0      255520         18  1750.7832  1746.1936               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 12.00.03.591 PM               0      255069         44  1806.0317  1800.0189               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 12.30.09.204 PM               0      267619          9   1798.965   1793.584               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 01.00.14.275 PM               0      255360         10  1795.9277  1790.2739               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 01.30.02.145 PM               0      255301          8  1811.1054  1805.1636               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 02.00.08.325 PM               0      249649         12  1806.7036  1802.5256               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 02.30.16.083 PM               0      255146          9  1798.5479  1794.0571               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 03.00.22.472 PM               0      254826         12  1816.3741  1812.4606               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 03.30.29.158 PM               0      257025          9  1795.3628  1791.4297               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 04.00.35.094 PM               0      232270        234  1767.2436   1759.397               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 04.30.01.862 PM               0      259928         14  1805.5624  1799.8157               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 05.00.07.636 PM               0      246336        130  1807.4103  1801.4912               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 05.30.13.938 PM               0      257370          9  1783.8976  1778.1242               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 06.00.04.247 PM               0      239711        112  1821.9141  1814.8378               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 06.30.13.361 PM               0      256094         10  1793.6245  1789.2976               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 07.00.19.650 PM               0      254935         10  1810.2411   1806.101               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 07.30.27.008 PM               0      258716          6  1801.9734  1797.6394               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 08.00.33.478 PM               0      253075        100  1812.1575  1808.2029               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 08.30.41.679 PM               0      251509          6  1754.6667  1748.8313               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 09.00.03.976 PM               0      245074        128  1811.1767  1807.0951               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 09.30.12.202 PM               0      258658         10  1791.7188  1787.7197               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 10.00.03.159 PM               0      248208         46   1833.132  1828.6086               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 10.30.11.815 PM               0      252139         77  1782.1324  1777.3963               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 11.00.18.783 PM               0      241680         62  1815.2633  1810.3828               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 11.30.29.023 PM               0      251138          6  1802.6847  1797.5123               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 12.00.36.579 AM               0      229472         52  1818.0723  1772.9836               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 12.30.50.007 AM               0      248519         10  1750.2316  1746.0367               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 01.00.07.443 AM               0      246376        154  1805.0834  1799.3678               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 01.30.06.362 AM               0      253101         16  1803.8833  1799.6498               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 02.00.13.766 AM               0      230226         51   1814.365  1766.6912               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 02.30.25.756 AM               0      258657          6  1799.2434  1793.8853               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 03.00.32.335 AM               0      252554         56   1810.174   1805.807               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 03.30.38.889 AM               0      262362          6  1801.4555  1796.6509               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 04.00.44.167 AM               0      243801         26  1758.8756  1755.7514               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 04.30.03.851 AM               0      253969        154  1800.8375  1795.3727               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 05.00.10.054 AM               0      261861         54  1808.6251  1804.1959               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 05.30.16.907 AM               0      272593          6  1791.3982  1787.3309               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 06.00.05.500 AM               0       36542        268   248.0179   247.3526               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 06.30.11.789 AM               0      273875        793  1790.9145  1788.2879               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 07.00.16.724 AM               0      267528        776  1765.1012  1762.6184               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 07.30.22.605 AM               0      273430        805  1798.4052  1795.0988               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 08.00.27.872 AM               0      276254        820  1813.4359  1809.5739               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 08.30.33.001 AM               0      275226        764  1799.8059  1796.7668               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 09.00.39.474 AM               0      266047        735  1767.9331  1764.7641               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 09.30.07.150 AM               0      273840        735  1803.6865  1799.6589               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 10.00.14.287 AM               0      274638        737  1808.3203  1805.2214               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 10.30.20.336 AM               0      274803        737  1778.1658  1772.6372               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 11.00.03.106 AM               0      278627        901  1806.7819  1802.3979               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 11.30.08.979 AM               0      280877        842  1802.0898  1798.6262               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 12.00.15.081 PM               0      280327        835  1808.5645  1804.9235               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 12.30.20.570 PM               0      281388        843  1804.5537  1801.0048               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 01.00.26.512 PM               0      274810        752  1809.7844  1807.3258               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 01.30.32.969 PM               0      268935        731  1761.6983  1758.4436               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 02.00.02.741 PM               0      271694        734  1811.6313  1808.5802               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 02.30.09.167 PM               0      281168        742   1799.881  1796.3885               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 03.00.15.103 PM               0      264440        813  1813.9318  1810.6922               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 03.30.22.732 PM               0      263150        813  1778.9528  1775.1085               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 04.00.00.956 PM               0      261031        798  1814.6443  1810.7852               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 04.30.06.957 PM               0      262765        815  1794.3354  1791.0521               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 05.00.12.207 PM               0      260674        813  1817.1488  1811.0516               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 05.30.17.971 PM               0      262690        771   1790.125  1786.0711               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 06.00.23.099 PM               0      265726        972  1816.5628  1811.7581               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 06.30.28.850 PM               0      261749        927  1763.0416  1759.1637               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 07.00.05.800 PM               0      263627        774  1811.4966  1806.1847               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 07.30.13.430 PM               0      276095        764  1799.3797  1795.7655               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 08.00.20.167 PM               0      264111        726  1816.5481  1811.2448               0
+
+69 rows selected.
+
+Elapsed: 00:00:00.91
+OIDUSER@TGARDWHRW 2019-11-30 20:53:58 SQL> @sqlidh 85sf5uv5t1dj9
+historical performance of a sql_id(var 1 ) For the last 7 days
+use sta sqildhf force_matching_signature for the last 7 days
+
+ I# PLAN_HASH_VALUE FORCE_MATCHING_SIGNTURE                  PARSE_SCHEM BEGIN_INTERVAL_TIME            EXEC_DELTA BUFFER_GETS DISK_READS ELAPSED_SN     CPU_SN ROWS_PROCCESSED
+--- --------------- ---------------------------------------- ----------- ------------------------------ ---------- ----------- ---------- ---------- ---------- ---------------
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 10.00.20.307 AM               0      207034        110  1417.2942  1413.2237               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 10.30.25.953 AM               0      258531         50  1785.8202  1781.3372               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 11.00.32.177 AM               0      256142         16  1811.0623  1805.0643               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 11.30.38.793 AM               0      255520         18  1750.7832  1746.1936               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 12.00.03.591 PM               0      255069         44  1806.0317  1800.0189               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 12.30.09.204 PM               0      267619          9   1798.965   1793.584               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 01.00.14.275 PM               0      255360         10  1795.9277  1790.2739               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 01.30.02.145 PM               0      255301          8  1811.1054  1805.1636               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 02.00.08.325 PM               0      249649         12  1806.7036  1802.5256               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 02.30.16.083 PM               0      255146          9  1798.5479  1794.0571               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 03.00.22.472 PM               0      254826         12  1816.3741  1812.4606               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 03.30.29.158 PM               0      257025          9  1795.3628  1791.4297               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 04.00.35.094 PM               0      232270        234  1767.2436   1759.397               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 04.30.01.862 PM               0      259928         14  1805.5624  1799.8157               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 05.00.07.636 PM               0      246336        130  1807.4103  1801.4912               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 05.30.13.938 PM               0      257370          9  1783.8976  1778.1242               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 06.00.04.247 PM               0      239711        112  1821.9141  1814.8378               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 06.30.13.361 PM               0      256094         10  1793.6245  1789.2976               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 07.00.19.650 PM               0      254935         10  1810.2411   1806.101               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 07.30.27.008 PM               0      258716          6  1801.9734  1797.6394               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 08.00.33.478 PM               0      253075        100  1812.1575  1808.2029               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 08.30.41.679 PM               0      251509          6  1754.6667  1748.8313               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 09.00.03.976 PM               0      245074        128  1811.1767  1807.0951               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 09.30.12.202 PM               0      258658         10  1791.7188  1787.7197               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 10.00.03.159 PM               0      248208         46   1833.132  1828.6086               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 10.30.11.815 PM               0      252139         77  1782.1324  1777.3963               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 11.00.18.783 PM               0      241680         62  1815.2633  1810.3828               0
+  1      2098243032 657815421302719137                       UGARODI     29-NOV-19 11.30.29.023 PM               0      251138          6  1802.6847  1797.5123               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 12.00.36.579 AM               0      229472         52  1818.0723  1772.9836               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 12.30.50.007 AM               0      248519         10  1750.2316  1746.0367               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 01.00.07.443 AM               0      246376        154  1805.0834  1799.3678               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 01.30.06.362 AM               0      253101         16  1803.8833  1799.6498               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 02.00.13.766 AM               0      230226         51   1814.365  1766.6912               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 02.30.25.756 AM               0      258657          6  1799.2434  1793.8853               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 03.00.32.335 AM               0      252554         56   1810.174   1805.807               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 03.30.38.889 AM               0      262362          6  1801.4555  1796.6509               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 04.00.44.167 AM               0      243801         26  1758.8756  1755.7514               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 04.30.03.851 AM               0      253969        154  1800.8375  1795.3727               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 05.00.10.054 AM               0      261861         54  1808.6251  1804.1959               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 05.30.16.907 AM               0      272593          6  1791.3982  1787.3309               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 06.00.05.500 AM               0       36542        268   248.0179   247.3526               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 06.30.11.789 AM               0      273875        793  1790.9145  1788.2879               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 07.00.16.724 AM               0      267528        776  1765.1012  1762.6184               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 07.30.22.605 AM               0      273430        805  1798.4052  1795.0988               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 08.00.27.872 AM               0      276254        820  1813.4359  1809.5739               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 08.30.33.001 AM               0      275226        764  1799.8059  1796.7668               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 09.00.39.474 AM               0      266047        735  1767.9331  1764.7641               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 09.30.07.150 AM               0      273840        735  1803.6865  1799.6589               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 10.00.14.287 AM               0      274638        737  1808.3203  1805.2214               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 10.30.20.336 AM               0      274803        737  1778.1658  1772.6372               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 11.00.03.106 AM               0      278627        901  1806.7819  1802.3979               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 11.30.08.979 AM               0      280877        842  1802.0898  1798.6262               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 12.00.15.081 PM               0      280327        835  1808.5645  1804.9235               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 12.30.20.570 PM               0      281388        843  1804.5537  1801.0048               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 01.00.26.512 PM               0      274810        752  1809.7844  1807.3258               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 01.30.32.969 PM               0      268935        731  1761.6983  1758.4436               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 02.00.02.741 PM               0      271694        734  1811.6313  1808.5802               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 02.30.09.167 PM               0      281168        742   1799.881  1796.3885               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 03.00.15.103 PM               0      264440        813  1813.9318  1810.6922               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 03.30.22.732 PM               0      263150        813  1778.9528  1775.1085               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 04.00.00.956 PM               0      261031        798  1814.6443  1810.7852               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 04.30.06.957 PM               0      262765        815  1794.3354  1791.0521               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 05.00.12.207 PM               0      260674        813  1817.1488  1811.0516               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 05.30.17.971 PM               0      262690        771   1790.125  1786.0711               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 06.00.23.099 PM               0      265726        972  1816.5628  1811.7581               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 06.30.28.850 PM               0      261749        927  1763.0416  1759.1637               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 07.00.05.800 PM               0      263627        774  1811.4966  1806.1847               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 07.30.13.430 PM               0      276095        764  1799.3797  1795.7655               0
+  1      2098243032 657815421302719137                       UGARODI     30-NOV-19 08.00.20.167 PM               0      264111        726  1816.5481  1811.2448               0
+
+69 rows selected.
+
+Elapsed: 00:00:00.22
+OIDUSER@TGARDWHRW 2019-11-30 20:55:08 SQL> 
+OIDUSER@TGARDWHRW 2019-11-30 20:55:12 SQL> 
+OIDUSER@TGARDWHRW 2019-11-30 20:55:12 SQL> sta s
+NO BACKGROUND,ACTIVE SLAVES,ACTIVE SINGLES
+
+T USERNAME         I#        SID    SERIAL#       SPID #SLVS LOGON_TIME             LC_ET SQL_ID         SC# MACHINE         OSUSER          FBI     FBS EVENT
+- --------------- --- ---------- ---------- ---------- ----- ----------------- ---------- -------------- --- --------------- --------------- --- ------- ----------------------------------
+S UGARODI           1        272      38115     339605     1 20191129 10:07:21     125511 85sf5uv5t1dj9    0 gbxdep01        oracle                      SQL*Net more data from dblink
+S UGARODI           1        888       7575     228591     1 20191129 15:47:10     105122 bf2qp5d394k90    0 gbxdep01        oracle                      SQL*Net more data from dblink
+S UGARODI           1        973      50858     189600     1 20191130 06:27:11      52322 49a1wcvy5ksrw    0 gbbdap24        oracle            1     272 enq: TM - contention
+S OIDUSER           2        451      38898     349988     1 20191130 20:44:57          0 dqwnr7fxka513    0 EKNB0284        UmutTe                      SQL*Net message to client
+
+Elapsed: 00:00:00.30
+
+USE @s1 <inst_id> <sid>  for more info on a single session.
+USE @smt <inst_id> <sid> for text base sql monitor.
+USE @sma <inst_id> <sid> for html base sql monitor.
+USE @sqlid <sql_id>      for sql_id and details.
+OIDUSER@TGARDWHRW 2019-11-30 20:59:13 SQL> @sqlid bf2qp5d394k90
+Show SQL text, child cursors and execution stats for SQLID bf2qp5d394k90
+
+HASH_VALUE  CH#  PLAN_HASH PARSE_SCHEMA         SQL_TEXT                                                                         SQL_PROFILE          FORCE_MATCHING_SIGNATURE
+---------- ---- ---------- -------------------- -------------------------------------------------------------------------------- -------------------- ------------------------
+1183992096    0 2098243032 UGARODI              insert /*+ noparallel append */ into TGARYSR.TDM_MONTHLY_ACCOUNT                                          15426921457119353779
+                                                (
+                                                "ETL_DATE","CUSTOMER_NUM","UNIT_NUM","ACCOUNT_NUM","CREATOR_UNIT_NUM","ACCOUNT_M
+                                                AIN_TYPE","ACCOUNT_SUB_TYPE","PRODUCT_CODE","SUB_PRODUCT_CODE","GL_ACCOUNT_NUM",
+                                                "OPEN_DATE","OPEN_VALUE_DATE","CURR_CODE","INTEREST_DUR_CNT","INTEREST_FREQ_CODE
+                                                ","INTEREST_FREQ_DESC","CLOSE_DATE","CLOSED_IND","INTEREST_RATE","DUE_DATE","NEX
+                                                T_ACCRUMNT_DATE","NET_INTEREST_AMNT","BLOCKED_BLN_AMNT","ACCUM_COMMIS_AMNT","TEK
+                                                H_ACCM_INT_AMNT","EOD_ACCM_INT_AMNT","VD_ACCM_INT_AMNT","BALANCE_AMNT","CUM_BALA
+                                                NCE_AMNT","OD_BALANCE_AMNT","TMSF_TIME_DEPOSIT_IND","TMSF_CURRENT_ACCT_IND","AFF
+                                                _AWARD_NUM","INDX_MAIN_TYPE","INDX_SUB_TYPE_TEXT","IP_TP_ID","DOMICILE_FLG","COU
+                                                NTRY_OF_RES_ID","OWNERSHIP_TP_ID","LAST_TXN_DATE","LAST_ACCRMNT_DATE","LGL_STRUC
+                                                _TP_ID","ACTION_PLACE_ID","DATA_DATE","LMT_AMNT","SPREAD_RATE","INTEREST_RELATED
+                                                _AMNT","BALANCE_ORG_AMNT","DEPOSIT_BALANCE_AMNT" )
+                                                select
+                                                "ETL_DATE","CUSTOMER_NUM","UNIT_NUM","ACCOUNT_NUM","CREATOR_UNIT_NUM","ACCOUNT_M
+                                                AIN_TYPE","ACCOUNT_SUB_TYPE","PRODUCT_CODE","SUB_PRODUCT_CODE","GL_ACCOUNT_NUM",
+                                                "OPEN_DATE","OPEN_VALUE_DATE","CURR_CODE","INTEREST_DUR_CNT","INTEREST_FREQ_CODE
+                                                ","INTEREST_FREQ_DESC","CLOSE_DATE","CLOSED_IND","INTEREST_RATE","DUE_DATE","NEX
+                                                T_ACCRUMNT_DATE","NET_INTEREST_AMNT","BLOCKED_BLN_AMNT","ACCUM_COMMIS_AMNT","TEK
+                                                H_ACCM_INT_AMNT","EOD_ACCM_INT_AMNT","VD_ACCM_INT_AMNT","BALANCE_AMNT","CUM_BALA
+                                                NCE_AMNT","OD_BALANCE_AMNT","TMSF_TIME_DEPOSIT_IND","TMSF_CURRENT_ACCT_IND","AFF
+                                                _AWARD_NUM","INDX_MAIN_TYPE","INDX_SUB_TYPE_TEXT","IP_TP_ID","DOMICILE_FLG","COU
+                                                NTRY_OF_RES_ID","OWNERSHIP_TP_ID","LAST_TXN_DATE","LAST_ACCRMNT_DATE","LGL_STRUC
+                                                _TP_ID","ACTION_PLACE_ID","DATA_DATE","LMT_AMNT","SPREAD_RATE","INTEREST_RELATED
+                                                _AMNT","BALANCE_ORG_AMNT","DEPOSIT_BALANCE_AMNT" from
+                                                PGARYSR.TDM_MONTHLY_ACCOUNT@ODI_DATA_TRANS_PGARDWH where 1=1 and ETL_DATE IN
+                                                (TO_DATE('20190630','YYYYMMDD'),TO_DATE('20190731','YYYYMMDD'),TO_DATE('20190831
+                                                ','YYYYMMDD'),TO_DATE('20190930','YYYYMMDD'))
+
+
+Elapsed: 00:00:00.32
+
+   INST_ID  CH#     PARSES   H_PARSES EXECUTIONS    FETCHES ROWS_PROCESSED    CPU_SEC    ELA_SEC       LIOS       PIOS      SORTS FIRST_LOAD_TIME     LAST_ACTIVE_TIME
+---------- ---- ---------- ---------- ---------- ---------- -------------- ---------- ---------- ---------- ---------- ---------- ------------------- -------------------
+         1    0          1          2          0          0              0  104845.76  105227.71    7080925       4455          0 2019-11-29/14:27:31 2019-11-30 21:01:03
+
+Elapsed: 00:00:00.12
+
+SQL_ID         FORCE_MATCHING_SIGNATURE
+-------------- ------------------------
+bf2qp5d394k90      15426921457119353779
+
+Elapsed: 00:00:00.13
+@sqlidh bf2qp5d394k90 for history
+@sqlids bf2qp5d394k90 for sessions running this sql
+@sqls TIMS  for sqls from this user
+@sqlhistogram TIMS   for sqlhistogram from this user
+@sqlx bf2qp5d394k90 CHILD_NUMBER INST_ID  (last exeqution plan for rac)
+@sqlxp bf2qp5d394k90 PLAN_HASH_VALUE CHILD_NUMBER INST_ID (last execution plan for plan_hash_value)
+@sqlxa bf2qp5d394k90 PLAN_HASH_VALUE (execution plan from AWR)
+OIDUSER@TGARDWHRW 2019-11-30 21:01:05 SQL> @sqlids bf2qp5d394k90
+NO SYS,NO BACKGROUND,ACTIVE SLAVES,ACTIVE SINGLES
+
+T USERNAME          I#        SID    SERIAL#    #slaves LOGON_TIME        LAST_CALL_ET SQL_ID         SC# STATUS     TERMINAL        OSUSER          FBI     FBS FBS_STATUS  EVENT                              RESOURCE_CONSUMER_GROUP   SERVICE_NA CLIENT_INFO
+- ---------------- --- ---------- ---------- ---------- ----------------- ------------ -------------- --- ---------- --------------- --------------- --- ------- ----------- ---------------------------------- ------------------------- ---------- --------------------------------
+S UGARODI            1        888       7575          1 2019-11-29 15:47:       105298 bf2qp5d394k90    0 ACTIVE     UNKNOWN         oracle                      NOT IN WAIT SQL*Net more data from dblink      OTHER_GROUPS              SYS$USERS
+                                                        10
+
+
+Elapsed: 00:00:00.26
+
+USE @s1 <inst_id> <sid>  for more info on a single session.
+USE @smt <inst_id> <sid> for text base sql monitor.
+USE @sma <inst_id> <sid> for html base sql monitor.
+OIDUSER@TGARDWHRW 2019-11-30 21:02:09 SQL> @sqlidh bf2qp5d394k90
+historical performance of a sql_id(var 1 ) For the last 7 days
+use sta sqildhf force_matching_signature for the last 7 days
+
+ I# PLAN_HASH_VALUE FORCE_MATCHING_SIGNTURE                  PARSE_SCHEM BEGIN_INTERVAL_TIME            EXEC_DELTA BUFFER_GETS DISK_READS ELAPSED_SN     CPU_SN ROWS_PROCCESSED
+--- --------------- ---------------------------------------- ----------- ------------------------------ ---------- ----------- ---------- ---------- ---------- ---------------
+  2      2098243032 15426921457119353779                     UGARODI     29-NOV-19 01.30.02.194 PM               0       14162         88      .4621      .1291               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 02.00.08.325 PM               0        1443          7      .1303      .0785               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 02.30.16.083 PM               0           1          0      .1824      .0052               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 03.30.29.158 PM               0       58210        337   806.7705   804.4059               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 04.00.35.094 PM               0      110631        102  1768.5024  1763.3585               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 04.30.01.862 PM               0      124101         13  1803.9107   1798.905               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 05.00.07.636 PM               0      112924         28  1805.9617  1801.1133               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 05.30.13.938 PM               0      119845          4  1783.3717  1778.1353               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 06.00.04.247 PM               0      114995         16  1822.8458  1816.6767               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 06.30.13.361 PM               0      125498          0  1794.9448  1789.7909               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 07.00.19.650 PM               0      117154          3  1810.8908  1806.3517               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 07.30.27.008 PM               0      118079          0  1801.4058  1796.6222               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 08.00.33.478 PM               0      114349         46  1811.7718  1806.4813               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 08.30.41.679 PM               0      114452          0  1754.0356  1748.9769               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 09.00.03.976 PM               0      114098        164  1809.9201  1804.8249               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 09.30.12.202 PM               0      122806          0  1790.9406   1786.357               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 10.00.03.159 PM               0      118222         65  1833.1435   1827.919               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 10.30.11.815 PM               0      122674          0  1780.6718  1775.8294               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 11.00.18.783 PM               0      118424         16  1815.9333  1810.1526               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 11.30.29.023 PM               0      117132          0  1802.5797  1797.7556               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 12.00.36.579 AM               0      106013         74  1819.1027  1778.8305               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 12.30.50.007 AM               0      116093          2  1749.8845  1744.6085               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 01.00.07.443 AM               0      114883         11  1803.9946  1799.9151               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 01.30.06.362 AM               0      122026          9  1802.3748  1797.4339               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 02.00.13.766 AM               0      111452         89  1815.8886  1770.0525               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 02.30.25.756 AM               0      126743          5  1799.8803  1794.7806               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 03.00.32.335 AM               0      122129         65   1809.254  1803.8564               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 03.30.38.889 AM               0      125527          4  1801.9857  1796.8193               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 04.00.44.167 AM               0      110040          5  1758.5452  1754.5146               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 04.30.03.851 AM               0      117379        142  1803.6034  1798.4889               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 05.00.10.054 AM               0      124657         42  1808.1779  1803.0899               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 05.30.16.907 AM               0      129710          0  1792.0219  1786.7776               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 06.00.05.500 AM               0      121735        110  1863.6199  1859.4574               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 06.30.11.789 AM               0      126105          0   1790.584  1785.6968               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 07.00.16.724 AM               0      134155         20  1765.1882  1760.7212               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 07.30.22.605 AM               0      126093          0   1799.998  1793.7876               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 08.00.27.872 AM               0      139474         15  1813.6675  1809.0104               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 08.30.33.001 AM               0      128091          0  1799.8953  1795.5189               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 09.00.39.474 AM               0      122909          6   1764.944  1758.1589               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 09.30.07.150 AM               0      126549          9  1804.4684  1798.2552               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 10.00.14.287 AM               0      126730          7  1809.9892  1802.5965               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 10.30.20.336 AM               0      127333          0  1779.2177  1773.0689               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 11.00.03.106 AM               0      127676          4  1806.6974   1801.856               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 11.30.08.979 AM               0      128622          0  1801.1832  1796.1641               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 12.00.15.081 PM               0      130096          0  1806.2993  1801.9257               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 12.30.20.570 PM               0      130638          0  1806.0933  1800.0682               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 01.00.26.512 PM               0      124808         10  1807.9415  1803.1666               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 01.30.32.969 PM               0      119123          0     1760.6  1756.1895               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 02.00.02.741 PM               0      123255         42  1810.0364  1805.2579               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 02.30.09.167 PM               0      128700          0  1800.4298  1792.5847               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 03.00.15.103 PM               0      121001        153  1812.5028  1807.8419               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 03.30.22.732 PM               0      120474        110  1779.4442  1775.5004               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 04.00.00.956 PM               0      120944        525  1814.9497  1809.3069               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 04.30.06.957 PM               0      120562        392  1795.4228  1788.9396               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 05.00.12.207 PM               0      119905        288  1817.4166  1811.9651               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 05.30.17.971 PM               0      113894        174  1791.5248  1785.6278               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 06.00.23.099 PM               0      111969        375   1812.927  1807.2804               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 06.30.28.850 PM               0      111293        399  1762.5592  1757.2397               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 07.00.05.800 PM               0      112608        154  1812.1547  1806.2644               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 07.30.13.430 PM               0      122280         39  1798.7337  1793.0137               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 08.00.20.167 PM               0      119964        195  1818.1935  1813.0742               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 08.30.26.663 PM               0      119435        185  1795.4982  1790.3555               0
+
+62 rows selected.
+
+Elapsed: 00:00:00.74
+OIDUSER@TGARDWHRW 2019-11-30 21:03:34 SQL> sta sqildhf 15426921457119353779
+SP2-0310: unable to open file "sqildhf.sql"
+OIDUSER@TGARDWHRW 2019-11-30 21:04:24 SQL> sta sqlidhf 15426921457119353779
+historical performance of a force_matching_signature(var 1 ) for the last 7 days
+
+no rows selected
+
+Elapsed: 00:00:09.62
+OIDUSER@TGARDWHRW 2019-11-30 21:04:42 SQL> @sqlidh bf2qp5d394k90
+historical performance of a sql_id(var 1 ) For the last 7 days
+use sta sqildhf force_matching_signature for the last 7 days
+
+ I# PLAN_HASH_VALUE FORCE_MATCHING_SIGNTURE                  PARSE_SCHEM BEGIN_INTERVAL_TIME            EXEC_DELTA BUFFER_GETS DISK_READS ELAPSED_SN     CPU_SN ROWS_PROCCESSED
+--- --------------- ---------------------------------------- ----------- ------------------------------ ---------- ----------- ---------- ---------- ---------- ---------------
+  2      2098243032 15426921457119353779                     UGARODI     29-NOV-19 01.30.02.194 PM               0       14162         88      .4621      .1291               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 02.00.08.325 PM               0        1443          7      .1303      .0785               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 02.30.16.083 PM               0           1          0      .1824      .0052               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 03.30.29.158 PM               0       58210        337   806.7705   804.4059               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 04.00.35.094 PM               0      110631        102  1768.5024  1763.3585               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 04.30.01.862 PM               0      124101         13  1803.9107   1798.905               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 05.00.07.636 PM               0      112924         28  1805.9617  1801.1133               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 05.30.13.938 PM               0      119845          4  1783.3717  1778.1353               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 06.00.04.247 PM               0      114995         16  1822.8458  1816.6767               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 06.30.13.361 PM               0      125498          0  1794.9448  1789.7909               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 07.00.19.650 PM               0      117154          3  1810.8908  1806.3517               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 07.30.27.008 PM               0      118079          0  1801.4058  1796.6222               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 08.00.33.478 PM               0      114349         46  1811.7718  1806.4813               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 08.30.41.679 PM               0      114452          0  1754.0356  1748.9769               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 09.00.03.976 PM               0      114098        164  1809.9201  1804.8249               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 09.30.12.202 PM               0      122806          0  1790.9406   1786.357               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 10.00.03.159 PM               0      118222         65  1833.1435   1827.919               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 10.30.11.815 PM               0      122674          0  1780.6718  1775.8294               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 11.00.18.783 PM               0      118424         16  1815.9333  1810.1526               0
+  1      2098243032 15426921457119353779                     UGARODI     29-NOV-19 11.30.29.023 PM               0      117132          0  1802.5797  1797.7556               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 12.00.36.579 AM               0      106013         74  1819.1027  1778.8305               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 12.30.50.007 AM               0      116093          2  1749.8845  1744.6085               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 01.00.07.443 AM               0      114883         11  1803.9946  1799.9151               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 01.30.06.362 AM               0      122026          9  1802.3748  1797.4339               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 02.00.13.766 AM               0      111452         89  1815.8886  1770.0525               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 02.30.25.756 AM               0      126743          5  1799.8803  1794.7806               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 03.00.32.335 AM               0      122129         65   1809.254  1803.8564               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 03.30.38.889 AM               0      125527          4  1801.9857  1796.8193               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 04.00.44.167 AM               0      110040          5  1758.5452  1754.5146               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 04.30.03.851 AM               0      117379        142  1803.6034  1798.4889               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 05.00.10.054 AM               0      124657         42  1808.1779  1803.0899               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 05.30.16.907 AM               0      129710          0  1792.0219  1786.7776               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 06.00.05.500 AM               0      121735        110  1863.6199  1859.4574               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 06.30.11.789 AM               0      126105          0   1790.584  1785.6968               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 07.00.16.724 AM               0      134155         20  1765.1882  1760.7212               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 07.30.22.605 AM               0      126093          0   1799.998  1793.7876               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 08.00.27.872 AM               0      139474         15  1813.6675  1809.0104               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 08.30.33.001 AM               0      128091          0  1799.8953  1795.5189               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 09.00.39.474 AM               0      122909          6   1764.944  1758.1589               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 09.30.07.150 AM               0      126549          9  1804.4684  1798.2552               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 10.00.14.287 AM               0      126730          7  1809.9892  1802.5965               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 10.30.20.336 AM               0      127333          0  1779.2177  1773.0689               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 11.00.03.106 AM               0      127676          4  1806.6974   1801.856               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 11.30.08.979 AM               0      128622          0  1801.1832  1796.1641               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 12.00.15.081 PM               0      130096          0  1806.2993  1801.9257               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 12.30.20.570 PM               0      130638          0  1806.0933  1800.0682               0
+  1      2098243032 15426921457119353779                     UGARODI     30-NOV-19 01.00.26.512 PM               0      124808         10  1807.9415  1803.1666               0

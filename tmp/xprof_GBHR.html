@@ -1,0 +1,520 @@
+
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <base href="http://download.oracle.com/otn_software/"/>
+  <script language="javascript" type="text/javascript" src="emviewers/scripts/flashver.js">
+   <!--Test flash version-->
+  </script>
+  <style>
+      body { margin: 0px; overflow:hidden }
+    </style>
+ </head>
+ <body scroll="no">
+  <script type="text/xml">
+   <!--FXTMODEL-->
+   <report db_version="11.2.0.4.0" elapsed_time="1.19" cpu_time="1.18">
+    <report_id><![CDATA[/orarep/sqlmonitor/main?bucket_max_count=128&event_detail=yes&inst_id=1&report_level=ALL&session_id=1892]]></report_id>
+    <sql_monitor_report version="4.0" sysdate="04/12/2019 11:16:02">
+     <report_parameters>
+      <session_id>1892</session_id>
+      <bucket_count>34</bucket_count>
+      <interval_start>04/12/2019 11:15:30</interval_start>
+      <interval_end>04/12/2019 11:16:03</interval_end>
+     </report_parameters>
+     <target instance_id="1" session_id="1892" session_serial="4911" sql_id="5k9tcksa4cjbc" sql_exec_start="04/12/2019 11:15:30" sql_exec_id="16805918" sql_plan_hash="0" db_unique_name="GBHR" db_platform_name="Solaris[tm] OE (64-bit)" report_host_name="gbbrdp01">
+      <user_id>112</user_id>
+      <user>XXBRWEBSRV</user>
+      <program>w3wp.exe</program>
+      <module>w3wp.exe</module>
+      <service>srv_gbhr</service>
+      <plsql_entry_object_id>94715</plsql_entry_object_id>
+      <plsql_entry_subprogram_id>1</plsql_entry_subprogram_id>
+      <plsql_entry_name>XXBR.IKYS_BIREYSEL_KREDI_BILGI_3</plsql_entry_name>
+      <plsql_object_id>94715</plsql_object_id>
+      <plsql_subprogram_id>1</plsql_subprogram_id>
+      <plsql_name>XXBR.IKYS_BIREYSEL_KREDI_BILGI_3</plsql_name>
+      <sql_fulltext is_full="Y">Begin XXBR.IKYS_BIREYSEL_KREDI_BILGI_3(:v0, :v1, :v2, :v3, :v4, :v5, :v6, :v7, :v8, :v9, :v10, :v11); End;</sql_fulltext>
+      <status>DONE</status>
+      <refresh_count>17</refresh_count>
+      <first_refresh_time>04/12/2019 11:15:34</first_refresh_time>
+      <last_refresh_time>04/12/2019 11:16:02</last_refresh_time>
+      <duration>32</duration>
+      <optimizer_env>
+       <param name="_pga_max_size">419420 KB</param>
+       <param name="active_instance_count">1</param>
+       <param name="is_recur_flags">0</param>
+       <param name="parallel_autodop">0</param>
+       <param name="parallel_ddl_mode">enabled</param>
+       <param name="parallel_ddldml">0</param>
+       <param name="parallel_degree">0</param>
+       <param name="parallel_dml_mode">disabled</param>
+       <param name="parallel_execution_enabled">true</param>
+       <param name="parallel_max_degree">16</param>
+       <param name="parallel_query_default_dop">0</param>
+       <param name="parallel_query_mode">enabled</param>
+       <param name="pga_aggregate_target">2097152 KB</param>
+       <param name="total_cpu_count">8</param>
+      </optimizer_env>
+     </target>
+     <stats type="monitor">
+      <stat name="elapsed_time">31343614</stat>
+      <stat name="cpu_time">21365659</stat>
+      <stat name="user_io_wait_time">6283730</stat>
+      <stat name="plsql_exec_time">19501</stat>
+      <stat name="other_wait_time">3694225</stat>
+      <stat name="buffer_gets">482851</stat>
+      <stat name="disk_reads">12772</stat>
+      <stat name="read_reqs">12772</stat>
+      <stat name="read_bytes">3892043776</stat>
+     </stats>
+     <activity_sampled first_sample_time="04/12/2019 11:15:32" last_sample_time="04/12/2019 11:16:02" duration="31" count="30" wait_count="0" cpu_count="0" other_sql_count="30" cpu_cores="2" hyperthread="Y">
+      <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">29</activity>
+      <activity class="Other SQL Execution" event="sql_id: 6uq7thf3bfksw">1</activity>
+      <activity_histogram bucket_interval="1" bucket_count="34" start_time="04/12/2019 11:15:30" end_time="04/12/2019 11:16:03" duration="34">
+       <bucket number="3">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="4">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="5">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="6">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="7">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="8">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="9">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="10">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="11">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="12">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="14">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="15">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="16">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="17">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="18">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="19">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="20">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="21">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="22">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="23">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="24">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="25">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="26">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="27">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="28">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="29">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="30">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="31">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="32">
+        <activity class="Other SQL Execution" event="sql_id: 1wbrs2k65npnn">1</activity>
+       </bucket>
+       <bucket number="33">
+        <activity class="Other SQL Execution" event="sql_id: 6uq7thf3bfksw">1</activity>
+       </bucket>
+      </activity_histogram>
+     </activity_sampled>
+     <activity_detail start_time="04/12/2019 11:15:30" end_time="04/12/2019 11:16:03" first_sample_time="04/12/2019 11:15:32" last_sample_time="04/12/2019 11:16:02" duration="31" sample_interval="1" bucket_interval="1" bucket_count="34" bucket_duration="34" cpu_cores="2" total_cpu_cores="2" hyperthread="Y">
+      <bucket number="3">
+       <activity sql="1wbrs2k65npnn" top_sql_id="5k9tcksa4cjbc">1</activity>
+      </bucket>
+      <bucket number="4">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="5">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="6">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="7">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="8">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="9">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="10">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="11">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="12">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="14">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="15">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="16">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="17">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="18">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="19">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="20">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="21">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="22">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="23">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="24">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="25">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="26">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="27">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="28">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="29">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="30">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="31">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="32">
+       <activity sql="1wbrs2k65npnn">1</activity>
+      </bucket>
+      <bucket number="33">
+       <activity sql="6uq7thf3bfksw" top_sql_id="5k9tcksa4cjbc">1</activity>
+      </bucket>
+     </activity_detail>
+     <plan_monitor/>
+     <metrics bucket_interval="1" bucket_count="34" start_time="04/12/2019 11:15:30" end_time="04/12/2019 11:16:03" duration="34" cpu_cores="2" hyperthread="Y">
+      <bucket number="1">
+       <val l="nb_cpu">.87</val>
+       <val l="reads">457</val>
+       <val l="read_kb">137468</val>
+       <val l="interc_kb">137468</val>
+       <val l="pga_kb">5919</val>
+      </bucket>
+      <bucket number="2">
+       <val l="nb_cpu">1.07</val>
+       <val l="reads">120</val>
+       <val l="read_kb">35426</val>
+       <val l="interc_kb">35426</val>
+       <val l="pga_kb">5747</val>
+      </bucket>
+      <bucket number="3">
+       <val l="nb_cpu">.58</val>
+       <val l="reads">421</val>
+       <val l="read_kb">110522</val>
+       <val l="interc_kb">110522</val>
+       <val l="pga_kb">5748</val>
+      </bucket>
+      <bucket number="4">
+       <val l="nb_cpu">.69</val>
+       <val l="reads">367</val>
+       <val l="read_kb">96172</val>
+       <val l="interc_kb">96172</val>
+       <val l="pga_kb">5748</val>
+      </bucket>
+      <bucket number="5">
+       <val l="nb_cpu">.72</val>
+       <val l="reads">471</val>
+       <val l="read_kb">122749</val>
+       <val l="interc_kb">122749</val>
+       <val l="pga_kb">5749</val>
+      </bucket>
+      <bucket number="6">
+       <val l="nb_cpu">.74</val>
+       <val l="reads">458</val>
+       <val l="read_kb">120339</val>
+       <val l="interc_kb">120339</val>
+       <val l="pga_kb">5750</val>
+      </bucket>
+      <bucket number="7">
+       <val l="nb_cpu">.75</val>
+       <val l="reads">473</val>
+       <val l="read_kb">153546</val>
+       <val l="interc_kb">153546</val>
+       <val l="pga_kb">5746</val>
+      </bucket>
+      <bucket number="8">
+       <val l="nb_cpu">.64</val>
+       <val l="reads">376</val>
+       <val l="read_kb">108688</val>
+       <val l="interc_kb">108688</val>
+       <val l="pga_kb">5743</val>
+      </bucket>
+      <bucket number="9">
+       <val l="nb_cpu">.63</val>
+       <val l="reads">382</val>
+       <val l="read_kb">105428</val>
+       <val l="interc_kb">105428</val>
+       <val l="pga_kb">5751</val>
+      </bucket>
+      <bucket number="10">
+       <val l="nb_cpu">.59</val>
+       <val l="reads">445</val>
+       <val l="read_kb">117000</val>
+       <val l="interc_kb">117000</val>
+       <val l="pga_kb">5748</val>
+      </bucket>
+      <bucket number="11">
+       <val l="nb_cpu">.59</val>
+       <val l="reads">557</val>
+       <val l="read_kb">160610</val>
+       <val l="interc_kb">160610</val>
+       <val l="pga_kb">5745</val>
+      </bucket>
+      <bucket number="12">
+       <val l="nb_cpu">.35</val>
+       <val l="reads">400</val>
+       <val l="read_kb">142658</val>
+       <val l="interc_kb">142658</val>
+       <val l="pga_kb">5746</val>
+      </bucket>
+      <bucket number="13">
+       <val l="nb_cpu">1.07</val>
+       <val l="reads">373</val>
+       <val l="read_kb">138934</val>
+       <val l="interc_kb">138934</val>
+       <val l="pga_kb">5747</val>
+      </bucket>
+      <bucket number="14">
+       <val l="nb_cpu">1.32</val>
+       <val l="reads">393</val>
+       <val l="read_kb">144858</val>
+       <val l="interc_kb">144858</val>
+       <val l="pga_kb">5751</val>
+      </bucket>
+      <bucket number="15">
+       <val l="nb_cpu">.76</val>
+       <val l="reads">434</val>
+       <val l="read_kb">152633</val>
+       <val l="interc_kb">152633</val>
+       <val l="pga_kb">5743</val>
+      </bucket>
+      <bucket number="16">
+       <val l="nb_cpu">.78</val>
+       <val l="reads">459</val>
+       <val l="read_kb">148791</val>
+       <val l="interc_kb">148791</val>
+       <val l="pga_kb">5750</val>
+      </bucket>
+      <bucket number="17">
+       <val l="nb_cpu">.77</val>
+       <val l="reads">506</val>
+       <val l="read_kb">155937</val>
+       <val l="interc_kb">155937</val>
+       <val l="pga_kb">5745</val>
+      </bucket>
+      <bucket number="18">
+       <val l="nb_cpu">.78</val>
+       <val l="reads">523</val>
+       <val l="read_kb">146178</val>
+       <val l="interc_kb">146178</val>
+       <val l="pga_kb">5750</val>
+      </bucket>
+      <bucket number="19">
+       <val l="nb_cpu">.76</val>
+       <val l="reads">503</val>
+       <val l="read_kb">135341</val>
+       <val l="interc_kb">135341</val>
+       <val l="pga_kb">5747</val>
+      </bucket>
+      <bucket number="20">
+       <val l="nb_cpu">.71</val>
+       <val l="reads">448</val>
+       <val l="read_kb">145258</val>
+       <val l="interc_kb">145258</val>
+       <val l="pga_kb">5749</val>
+      </bucket>
+      <bucket number="21">
+       <val l="nb_cpu">.74</val>
+       <val l="reads">506</val>
+       <val l="read_kb">168085</val>
+       <val l="interc_kb">168085</val>
+       <val l="pga_kb">5743</val>
+      </bucket>
+      <bucket number="22">
+       <val l="nb_cpu">.69</val>
+       <val l="reads">496</val>
+       <val l="read_kb">131563</val>
+       <val l="interc_kb">131563</val>
+       <val l="pga_kb">5751</val>
+      </bucket>
+      <bucket number="23">
+       <val l="nb_cpu">.62</val>
+       <val l="reads">391</val>
+       <val l="read_kb">111205</val>
+       <val l="interc_kb">111205</val>
+       <val l="pga_kb">5746</val>
+      </bucket>
+      <bucket number="24">
+       <val l="nb_cpu">.58</val>
+       <val l="reads">425</val>
+       <val l="read_kb">112536</val>
+       <val l="interc_kb">112536</val>
+       <val l="pga_kb">5746</val>
+      </bucket>
+      <bucket number="25">
+       <val l="nb_cpu">.58</val>
+       <val l="reads">390</val>
+       <val l="read_kb">106160</val>
+       <val l="interc_kb">106160</val>
+       <val l="pga_kb">5748</val>
+      </bucket>
+      <bucket number="26">
+       <val l="nb_cpu">.5</val>
+       <val l="reads">311</val>
+       <val l="read_kb">91852</val>
+       <val l="interc_kb">91852</val>
+       <val l="pga_kb">5748</val>
+      </bucket>
+      <bucket number="27">
+       <val l="nb_cpu">.47</val>
+       <val l="reads">297</val>
+       <val l="read_kb">118852</val>
+       <val l="interc_kb">118852</val>
+       <val l="pga_kb">5747</val>
+      </bucket>
+      <bucket number="28">
+       <val l="nb_cpu">.65</val>
+       <val l="reads">327</val>
+       <val l="read_kb">108211</val>
+       <val l="interc_kb">108211</val>
+       <val l="pga_kb">5749</val>
+      </bucket>
+      <bucket number="29">
+       <val l="nb_cpu">.64</val>
+       <val l="reads">375</val>
+       <val l="read_kb">96488</val>
+       <val l="interc_kb">96488</val>
+       <val l="pga_kb">5744</val>
+      </bucket>
+      <bucket number="30">
+       <val l="nb_cpu">.61</val>
+       <val l="reads">339</val>
+       <val l="read_kb">87802</val>
+       <val l="interc_kb">87802</val>
+       <val l="pga_kb">5749</val>
+      </bucket>
+      <bucket number="31">
+       <val l="nb_cpu">.69</val>
+       <val l="reads">418</val>
+       <val l="read_kb">110811</val>
+       <val l="interc_kb">110811</val>
+       <val l="pga_kb">6230</val>
+      </bucket>
+      <bucket number="32">
+       <val l="nb_cpu">.51</val>
+       <val l="reads">288</val>
+       <val l="read_kb">88556</val>
+       <val l="interc_kb">88556</val>
+       <val l="pga_kb">7372</val>
+      </bucket>
+      <bucket number="33">
+       <val l="nb_cpu">.4</val>
+       <val l="reads">36</val>
+       <val l="read_kb">15975</val>
+       <val l="interc_kb">15975</val>
+       <val l="pga_kb">3778</val>
+      </bucket>
+     </metrics>
+    </sql_monitor_report>
+   </report>
+   <!--FXTMODEL-->
+  </script>
+  <script language="JavaScript" type="text/javascript" src="emviewers/scripts/loadswf.js">
+   <!--Load report viewer-->
+  </script>
+  <iframe name="_history" frameborder="0" scrolling="no" width="22" height="0">
+   <html>
+    <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+     <script type="text/javascript" language="JavaScript1.2" charset="utf-8">
+                var v = new top.Vars(top.getSearch(window));
+                var fv = v.toString(&apos;$_&apos;);
+              </script>
+    </head>
+    <body>
+     <script type="text/javascript" language="JavaScript1.2" charset="utf-8" src="emviewers/scripts/document.js">
+      <!--Run document script-->
+     </script>
+    </body>
+   </html>
+  </iframe>
+ </body>
+</html>
+
+
+Elapsed: 00:00:01.31
