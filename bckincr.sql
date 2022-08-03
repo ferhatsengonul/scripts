@@ -20,7 +20,7 @@ column STATUS format a30
          OUTPUT_BYTES_DISPLAY out_size,
 	 SESSION_STAMP 
     FROM V$RMAN_BACKUP_JOB_DETAILS
- WHERE input_type IN ('DB INCR')
+ WHERE input_type IN ('DB INCR','DATAFILE INCR')
        and OUTPUT_DEVICE_TYPE is not null
 ORDER BY session_key asc;
 
