@@ -79,8 +79,6 @@ AS
                WHERE     T1.SQL_ID(+) = GS.SQL_ID
                      AND GS.STATUS = 'ACTIVE'
                      AND TYPE = 'USER'
-                     AND NVL (PROGRAM, 'abc') NOT LIKE
-                            'oracle@gbxd%.fw.garanti.com.tr (%'
                      AND GS.SQL_EXEC_START IS NOT NULL
             GROUP BY T1.SQL_ID,
                      T1.SQL_EXEC_START,
@@ -104,19 +102,19 @@ AS
                              END
                     AND ACTUAL_PLAN <> PREV_PLAN
                THEN
-                  '1.M‹DAHELE - PLAN ›NCELE'
+                  '1.M√úDAHELE - PLAN √ùNCELE'
                WHEN ELAPSED_SEC_PREV >= 300 AND ACTUAL_PLAN <> PREV_PLAN
                THEN
-                  '2.PROAKT›F - PLAN ›NCELE'
+                  '2.PROAKT√ùF - PLAN √ùNCELE'
                WHEN     ACTUAL_RUN > ELAPSED_SEC_PREV * 1.1
                     AND ACTUAL_PLAN = PREV_PLAN
                THEN
-                  '3.AYNI PLAN YAVAﬁ'
+                  '3.AYNI PLAN YAVA√û'
                WHEN ACTUAL_PLAN = PREV_PLAN
                THEN
-                  '4.÷NEMS›Z - AYNI PLAN'
+                  '4.√ñNEMS√ùZ - AYNI PLAN'
                ELSE
-                  '5.÷NEMS›Z'
+                  '5.√ñNEMS√ùZ'
             END
                AKSIYON,
             ALLTAB.*,
