@@ -43,12 +43,7 @@ SELECT a.TYPE,
          s.sql_id,
          s.sql_child_number "SC#",
 --         s.status,
---         s.machine,
-         case when instr(s.machine,'.fw.garanti.com.tr') !=0 then substr(s.machine,1,instr(s.machine,'.fw.garanti.com.tr')-1) 
-              when instr(s.machine,'GARANTI') != 0 then substr(s.machine,instr(s.machine,'GARANTI')+9)
-              when instr(s.machine,'.fw.teknoloji.com.tr') !=0 then substr(s.machine,1,instr(s.machine,'.fw.teknoloji.com.tr')-1) 
-              when instr(s.machine,'TEKNOLOJI') != 0 then substr(s.machine,instr(s.machine,'TEKNOLOJI')+11)
-         else s.machine end machine,       
+         s.machine,    
          s.osuser,
          s.final_blocking_instance fbi,
          S.FINAL_BLOCKING_SESSION fbs,
